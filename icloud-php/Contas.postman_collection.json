@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "76a95566-f3c2-4fd0-b545-8a9ba49ba003",
+		"name": "Contas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Contas a pagar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/icloud-php/contas/contasApagar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"icloud-php",
+						"contas",
+						"contasApagar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Balanço parcial por intervalo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/icloud-php/contas/geralParcial?data_inicial=2019-09-25&data_final=2019-10-25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"icloud-php",
+						"contas",
+						"geralParcial"
+					],
+					"query": [
+						{
+							"key": "data_inicial",
+							"value": "2019-09-25"
+						},
+						{
+							"key": "data_final",
+							"value": "2019-10-25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Balanço geral",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/icloud-php/contas/geral",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"icloud-php",
+						"contas",
+						"geral"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contas a receber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/icloud-php/contas/contasAreceber",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"icloud-php",
+						"contas",
+						"contasAreceber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar uma conta (a_receber/a_pagar)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "receber",
+							"type": "text"
+						},
+						{
+							"key": "valor",
+							"value": "60",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/icloud-php/contas/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"icloud-php",
+						"contas",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Balanço de todas as contas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/icloud-php/contas/ver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"icloud-php",
+						"contas",
+						"ver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adiciona uma conta (a_pagar/a_receber)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tipo",
+							"value": "pagar",
+							"type": "text"
+						},
+						{
+							"key": "valor",
+							"value": "105",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/icloud-php/contas/incluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"icloud-php",
+						"contas",
+						"incluir"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
